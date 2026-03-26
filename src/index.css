@@ -1,0 +1,58 @@
+/* منع التمرير عندما يكون اللودر مفتوحاً */
+body:has(.loader-active) {
+  overflow: hidden;
+}
+
+/* تأثير نبض خفيف للخلفية */
+.loader-bg {
+  background: radial-gradient(circle, #ffffff 0%, #f9fff9 100%);
+}
+/* حركة الطفو لصورة الهيرو */
+.floating-img {
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px) scale(1.05);
+  }
+  50% {
+    transform: translateY(-20px) scale(1.05);
+  }
+  100% {
+    transform: translateY(0px) scale(1.05);
+  }
+}
+
+/* تأثير عند الوقوف على كروت المنتجات */
+.product-card-custom:hover .hover-actions {
+  opacity: 1 !important;
+}
+
+.product-card-custom img {
+  transition: transform 0.4s ease;
+}
+
+.product-card-custom:hover img {
+  transform: scale(1.1);
+}
+
+/* زر الهيرو */
+.btn-green-hover {
+  transition: all 0.3s ease;
+}
+
+.btn-green-hover:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 178, 7, 0.4) !important;
+}
+
+/* تأثير انستجرام */
+.insta-card:hover .overlay-insta {
+  opacity: 1 !important;
+}
+
+/* تحسين السكرول */
+body {
+  scroll-behavior: smooth;
+}
