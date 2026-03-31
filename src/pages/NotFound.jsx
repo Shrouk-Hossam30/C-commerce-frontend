@@ -1,10 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { FiHome } from "react-icons/fi";
-import { motion } from "framer-motion"; // مكتبة الأنيميشن
+import { motion } from "framer-motion";
 
 export default function NotFound() {
-  // إعدادات حركة العناصر
   const containerVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
@@ -27,7 +26,6 @@ export default function NotFound() {
         initial="hidden"
         animate="visible"
       >
-        {/* أنيميشن الرقم 404 بديل الصورة */}
         <div className="position-relative mb-5">
           <motion.h1
             style={{
@@ -58,7 +56,6 @@ export default function NotFound() {
           </motion.div>
         </div>
 
-        {/* النص الوصفي */}
         <motion.p
           className="text-muted fs-5 mb-5 mx-auto"
           style={{ maxWidth: "500px" }}
@@ -67,7 +64,6 @@ export default function NotFound() {
           ويبدو أنك ضللت الطريق! الصفحة التي تبحث عنها غير موجودة أو تم نقلها.
         </motion.p>
 
-        {/* زرار العودة بتأثير Hover احترافي */}
         <motion.div
           variants={itemVariants}
           whileHover={{ scale: 1.05 }}
@@ -87,7 +83,6 @@ export default function NotFound() {
           </Link>
         </motion.div>
 
-        {/* دوائر خلفية للزينة (Animated Background Elements) */}
         <motion.div
           className="position-absolute rounded-circle opacity-25"
           style={{

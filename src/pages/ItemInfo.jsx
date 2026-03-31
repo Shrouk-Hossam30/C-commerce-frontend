@@ -13,7 +13,6 @@ import { GoHome } from "react-icons/go";
 import { IoIosArrowForward } from "react-icons/io";
 import { motion, AnimatePresence } from "framer-motion"; // للأنيميشن السلس
 
-// افترضت أن الصور مستوردة بنفس الأسماء في الكود الأصلي
 import bannerImg from "../assets/images/immg.jpg";
 import group19Logo from "../assets/images/Group_19.png";
 import img1 from "../assets/images/Product_Image_1.png";
@@ -38,7 +37,6 @@ export default function ItemInfo() {
 
   return (
     <div className="product-details-page bg-light min-vh-100 text-start pb-5">
-      {/* Breadcrumb Navigation */}
       <nav className="py-3 bg-white border-bottom mb-4">
         <div className="container">
           <div className="d-flex align-items-center gap-2 text-muted small">
@@ -58,7 +56,6 @@ export default function ItemInfo() {
 
       <div className="container bg-white rounded-4 shadow-sm p-4 p-lg-5">
         <div className="row g-5">
-          {/* Left Column: Image Gallery */}
           <div className="col-lg-6">
             <div className="row">
               <div className="col-2 d-flex flex-column gap-3">
@@ -92,7 +89,6 @@ export default function ItemInfo() {
             </div>
           </div>
 
-          {/* Right Column: Info */}
           <div className="col-lg-6">
             <div className="ps-lg-4">
               <div className="d-flex align-items-center gap-3 mb-2">
@@ -200,7 +196,6 @@ export default function ItemInfo() {
         </div>
       </div>
 
-      {/* Tabs Section */}
       <div className="container mt-5">
         <div className="bg-white rounded-4 shadow-sm p-4">
           <div className="d-flex justify-content-center gap-2 gap-md-5 border-bottom mb-4 overflow-auto">
@@ -260,13 +255,11 @@ export default function ItemInfo() {
                   </div>
                 </div>
               )}
-              {/* باقي التبويبات تتبع نفس النمط الفني */}
             </motion.div>
           </AnimatePresence>
         </div>
       </div>
 
-      {/* Related Products - Simplified & Elegant */}
       <div className="container mt-5 pt-4">
         <div className="d-flex justify-content-between align-items-end mb-4 px-2">
           <h2 className="fw-bolder m-0">Related Products</h2>

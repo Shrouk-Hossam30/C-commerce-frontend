@@ -5,7 +5,6 @@ const Preloader = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // محاكاة وقت التحميل (مثلاً 2.5 ثانية)
     const timer = setTimeout(() => {
       setLoading(false);
     }, 2500);
@@ -33,7 +32,6 @@ const Preloader = () => {
             justifyContent: "center",
           }}
         >
-          {/* أنيميشن الأيقونة المركزية */}
           <div className="position-relative mb-4">
             <motion.div
               animate={{
@@ -47,11 +45,9 @@ const Preloader = () => {
               }}
               style={{ fontSize: "80px" }}
             >
-              {/* أيقونة تعبر عن الخضروات/الفاكهة */}
               🥦
             </motion.div>
 
-            {/* حلقة الدوران حول الأيقونة */}
             <motion.div
               animate={{ rotate: 360 }}
               transition={{ duration: 1.5, repeat: Infinity, ease: "linear" }}
@@ -68,7 +64,6 @@ const Preloader = () => {
             />
           </div>
 
-          {/* نص التحميل مع حركة النقاط */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -98,7 +93,6 @@ const Preloader = () => {
             </div>
           </motion.div>
 
-          {/* بار التحميل السفلي */}
           <div
             className="mt-4 rounded-pill overflow-hidden"
             style={{

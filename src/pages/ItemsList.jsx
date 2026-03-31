@@ -4,7 +4,7 @@ import { FaArrowRight, FaTimes, FaStar, FaRegStar } from "react-icons/fa";
 import { GoHome } from "react-icons/go";
 import { IoIosArrowForward } from "react-icons/io";
 import { MdKeyboardArrowDown, MdOutlineShoppingBag } from "react-icons/md";
-import { motion } from "framer-motion"; // لإضافة حركات ناعمة
+import { motion } from "framer-motion";
 
 import bannerImg from "../assets/images/immg.jpg";
 import defaultImg from "../assets/images/Product_Image.png";
@@ -45,7 +45,6 @@ export default function ItemsList() {
     },
   ];
 
-  // مكون فرعي للعداد التنازلي لسهولة التعديل
   const CountdownUnit = ({ value, label }) => (
     <div
       className="text-center bg-white bg-opacity-10 rounded-2 p-2 px-3 border border-white border-opacity-25"
@@ -60,7 +59,6 @@ export default function ItemsList() {
 
   return (
     <div className="container py-4">
-      {/* Breadcrumbs */}
       <nav className="d-flex align-items-center gap-2 mb-4 text-muted small">
         <Link to="/" className="text-decoration-none text-muted">
           <GoHome size={18} />
@@ -71,7 +69,6 @@ export default function ItemsList() {
         <span className="text-success fw-bold">Shop</span>
       </nav>
 
-      {/* Modern Banner */}
       <div
         className="position-relative overflow-hidden rounded-4 mb-5 shadow-lg border-0"
         style={{
@@ -87,7 +84,7 @@ export default function ItemsList() {
             animate={{ opacity: 1, x: 0 }}
             className="text-success text-uppercase mb-2 tracking-wider fw-bolder"
           >
-            🔥 Best Deals
+            Best Deals
           </motion.p>
           <motion.h1
             initial={{ opacity: 0, x: -20 }}
@@ -138,7 +135,6 @@ export default function ItemsList() {
         </div>
       </div>
 
-      {/* Filters Toolbar */}
       <div className="d-flex flex-wrap justify-content-between align-items-center gap-3 mb-4 bg-white p-3 rounded-3 shadow-sm border">
         <div className="d-flex flex-wrap gap-2">
           {["Category", "Price", "Rating"].map((filter) => (
@@ -157,7 +153,6 @@ export default function ItemsList() {
         </div>
       </div>
 
-      {/* Results Count & Active Filters */}
       <div className="d-flex justify-content-between align-items-center py-3 border-bottom mb-4">
         <div className="d-flex align-items-center gap-3">
           <span className="text-muted small">Active Filters:</span>
@@ -175,7 +170,6 @@ export default function ItemsList() {
         </div>
       </div>
 
-      {/* Items Grid */}
       <div className="row g-4 mb-5">
         {myItems.map((item) => (
           <div className="col-lg-3 col-md-4 col-6" key={item.id}>
@@ -236,7 +230,6 @@ export default function ItemsList() {
         ))}
       </div>
 
-      {/* Pagination */}
       <div className="d-flex justify-content-center gap-2 mt-5">
         {[1, 2, 3].map((num) => (
           <div

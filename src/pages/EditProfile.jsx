@@ -12,7 +12,6 @@ import {
 import userImg from "../assets/images/Ellipse.png";
 
 export default function UserDashboard() {
-  // مصفوفة الروابط لتسهيل الإدارة وتجنب التكرار
   const navLinks = [
     {
       name: "Dashboard",
@@ -34,12 +33,11 @@ export default function UserDashboard() {
     { name: "Settings", icon: <MdSettings size={22} />, path: "/settings" },
   ];
 
-  // دالة لتنسيق لون حالة الطلب
   const getStatusBadge = (status) => {
     const styles = {
-      Processing: { bg: "#FFF9E5", color: "#FF8A00" }, // برتقالي
-      "On the way": { bg: "#E5F2FF", color: "#007BFF" }, // أزرق
-      Completed: { bg: "#EDF2EE", color: "#00B207" }, // أخضر
+      Processing: { bg: "#FFF9E5", color: "#FF8A00" },
+      "On the way": { bg: "#E5F2FF", color: "#007BFF" },
+      Completed: { bg: "#EDF2EE", color: "#00B207" },
     };
     const style = styles[status] || { bg: "#F2F2F2", color: "#666" };
 
@@ -57,7 +55,6 @@ export default function UserDashboard() {
     <div className="dashboard-wrapper py-5 bg-light text-start min-vh-100">
       <div className="container">
         <div className="row g-4">
-          {/* --- Navigation Sidebar --- */}
           <div className="col-lg-3">
             <div
               className="card border-0 shadow-sm overflow-hidden"
@@ -97,10 +94,8 @@ export default function UserDashboard() {
             </div>
           </div>
 
-          {/* --- Main Content --- */}
           <div className="col-lg-9">
             <div className="row g-4">
-              {/* Profile Card */}
               <div className="col-md-7">
                 <div
                   className="card h-100 border-0 shadow-sm text-center p-4 bg-white"
@@ -127,7 +122,6 @@ export default function UserDashboard() {
                 </div>
               </div>
 
-              {/* Billing Address Card */}
               <div className="col-md-5">
                 <div
                   className="card h-100 border-0 shadow-sm p-4 bg-white"
@@ -156,7 +150,6 @@ export default function UserDashboard() {
                 </div>
               </div>
 
-              {/* Recent Orders Table */}
               <div className="col-12 mt-2">
                 <div
                   className="card border-0 shadow-sm bg-white"

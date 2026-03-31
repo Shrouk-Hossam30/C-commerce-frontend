@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion"; // أضفنا فريمير موشن للحركة الاحترافية
+import { motion } from "framer-motion";
 import {
   FaFacebookF,
   FaTwitter,
@@ -13,7 +13,6 @@ import { AiOutlineApple } from "react-icons/ai";
 import { IoLogoGooglePlaystore } from "react-icons/io5";
 import LogoImage from "../assets/images/cricl.png";
 
-// 1. مكون زر التواصل الاجتماعي المطور
 const SocialButton = ({ iconElem, linkUrl = "#" }) => (
   <motion.a
     whileHover={{ y: -5, scale: 1.1, rotate: 8 }}
@@ -34,7 +33,6 @@ const SocialButton = ({ iconElem, linkUrl = "#" }) => (
   </motion.a>
 );
 
-// 2. مكون الروابط مع أنيميشن عند الـ Hover
 const FooterLinksGroup = ({ header, links }) => (
   <div className="col-lg-2 col-md-4 col-6 mb-4 mb-lg-0">
     <h6
@@ -209,7 +207,6 @@ export const FooterSection = () => {
         </div>
       </div>
 
-      {/* --- Bottom Bar --- */}
       <div
         className="py-4"
         style={{
@@ -220,7 +217,7 @@ export const FooterSection = () => {
         <div className="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
           <p className="small mb-0">
             © {currentYear} <span className="text-white fw-bold">Ecobazar</span>
-            . Designed with ❤️ for Organic Life.
+            . Designed with for Organic Life.
           </p>
           <div className="d-flex gap-4 opacity-50">
             <img

@@ -15,16 +15,13 @@ import logoImg from "../assets/images/Group.png";
 export default function Navbar() {
   const location = useLocation();
 
-  // حالة وهمية لمعرفة هل المستخدم مسجل دخول أم لا (يمكنك ربطها بـ Redux أو Context لاحقاً)
   const isLoggedIn = false;
 
   return (
     <>
-      {/* --- Main Header --- */}
       <nav className="navbar navbar-expand-lg bg-white border-bottom py-3 sticky-top shadow-sm">
         <div className="container px-lg-5">
           <div className="d-flex justify-content-between align-items-center w-100 gap-4">
-            {/* 1. Logo */}
             <Link
               to="/"
               className="d-flex align-items-center gap-2 text-decoration-none"
@@ -43,7 +40,6 @@ export default function Navbar() {
               </h1>
             </Link>
 
-            {/* 2. Smart Search Bar */}
             <div
               className="d-none d-lg-flex flex-grow-1 mx-5"
               style={{ maxWidth: "500px" }}
@@ -70,9 +66,7 @@ export default function Navbar() {
               </div>
             </div>
 
-            {/* 3. Action Icons & Auth */}
             <div className="d-flex align-items-center gap-3 gap-md-4">
-              {/* Login / Profile Section */}
               <div className="dropdown auth-dropdown">
                 <motion.div
                   whileHover={{ scale: 1.05 }}
@@ -196,7 +190,6 @@ export default function Navbar() {
         </div>
       </nav>
 
-      {/* --- Secondary Navbar --- */}
       <nav
         className="navbar navbar-expand-lg py-0 d-none d-lg-block"
         style={{ backgroundColor: "#1A1A1A" }}

@@ -1,9 +1,8 @@
 import React, { useState } from "react";
-import { motion } from "framer-motion"; // مكتبة الأنيميشن
+import { motion } from "framer-motion";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Ecobazar.css";
 
-// --- الأيقونات ---
 import { IoMdStar } from "react-icons/io";
 import { AiOutlineHeart, AiOutlineEye, AiOutlineApple } from "react-icons/ai";
 import { HiOutlineShoppingBag } from "react-icons/hi";
@@ -42,7 +41,6 @@ import user2 from "../assets/images/Image9.png";
 import user3 from "../assets/images/imag7.png";
 
 const EcobazarHero = () => {
-  // إعدادات الأنيميشن
   const fadeInUp = {
     hidden: { opacity: 0, y: 30 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
@@ -54,7 +52,6 @@ const EcobazarHero = () => {
 
   return (
     <div className="ecobazar-wrapper overflow-hidden">
-      {/* 1. Hero Section */}
       <section
         className="py-5 position-relative overflow-hidden"
         style={{
@@ -130,7 +127,6 @@ const EcobazarHero = () => {
         </div>
       </section>
 
-      {/* 2. Features Pill */}
       <div
         className="container"
         style={{ marginTop: "-60px", position: "relative", zIndex: "10" }}
@@ -169,7 +165,6 @@ const EcobazarHero = () => {
         </motion.div>
       </div>
 
-      {/* 3. Featured Products */}
       <section className="container mt-5 pt-5">
         <div className="text-center mb-5">
           <p className="text-success fw-bold mb-1">TOP QUALITY</p>
@@ -195,7 +190,6 @@ const EcobazarHero = () => {
         </motion.div>
       </section>
 
-      {/* 4. Hot Deals & Ads */}
       <section className="container mt-5 pt-5">
         <div className="row g-4">
           <motion.div
@@ -256,7 +250,6 @@ const EcobazarHero = () => {
         </div>
       </section>
 
-      {/* 5. Promotional Banners */}
       <div className="container mt-5 pt-5">
         <div className="row g-4">
           <div className="col-lg-6">
@@ -274,7 +267,6 @@ const EcobazarHero = () => {
         </div>
       </div>
 
-      {/* 6. Testimonials */}
       <section className="py-5 mt-5" style={{ backgroundColor: "#F3F4F6" }}>
         <div className="container py-4 text-center">
           <h2 className="display-6 fw-bold mb-5">What Our Clients Say</h2>
@@ -286,7 +278,6 @@ const EcobazarHero = () => {
         </div>
       </section>
 
-      {/* 7. Instagram */}
       <div className="container mt-5 pt-5 text-center mb-5">
         <h3 className="fw-bold mb-5">Follow us on Instagram</h3>
         <motion.div
@@ -302,7 +293,6 @@ const EcobazarHero = () => {
         </motion.div>
       </div>
 
-      {/* 8. Newsletter (تم تعديل الخلفية هنا) */}
       <section className="py-5" style={{ backgroundColor: "#f8f9fa" }}>
         <div className="container">
           <motion.div
@@ -337,8 +327,6 @@ const EcobazarHero = () => {
     </div>
   );
 };
-
-/* --- المكونات المساعدة --- */
 
 const FeatureItem = ({ src, title, desc }) => (
   <div className="d-flex align-items-center gap-3 px-3">
